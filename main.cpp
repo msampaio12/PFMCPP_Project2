@@ -16,17 +16,15 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
  put them here: 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+ int
+ char
+ float
+ double
+ bool
+ wchat_t
+ void
+
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration function.
     give each declaration an initial value
         just ignore wchar_t. you do not need to declare 3 variables of type 'wchar_t'
@@ -65,10 +63,42 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
+    int secNumber = 4;
+    int thirdNumber = 7;
+   
+    char character = 'a';
+    char symbol = '%';
+    char digit = '9';
     
-    
+    float floatPt1 = 1.0001f;
+    float floatPt2 = 1.2f;
+    float floatPt3 = 1.03f;
+
+    double doubleFloatPt1 = 1.1;
+    double doubleFloatPt2 = 1.2;
+    double doubleFloatPt3 = 1.3;
+
+    bool firstBoolean = 1;
+    bool secBoolean = true;
+    bool thirdBoolean = 0;
+
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(secNumber);
+    ignoreUnused(thirdNumber);
+    ignoreUnused(character);
+    ignoreUnused(symbol);
+    ignoreUnused(digit);
+    ignoreUnused(floatPt1);
+    ignoreUnused(floatPt2);
+    ignoreUnused(floatPt3);
+    ignoreUnused(doubleFloatPt1);
+    ignoreUnused(doubleFloatPt2);
+    ignoreUnused(doubleFloatPt3);
+    ignoreUnused(firstBoolean);
+    ignoreUnused(secBoolean);
+    ignoreUnused(thirdBoolean);
+
 }
 /*
  10 functions
@@ -80,45 +110,71 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
 
-/*
- 1)
- */
+ // 1)
+int numberOfLapsCompleted(int timeInSeconds, int speed) 
+  {
+    ignoreUnused(timeInSeconds, speed);
+    return {};
+  }
+ 
+ // 2)
+float measureTrackBpms(int beats, int timeInMinutes)  
+ {
+    ignoreUnused(beats, timeInMinutes);
+    return {};
+ }
+ 
 
-/*
- 2)
- */
+ // 3) 
+bool playTonight(int numberOfTracks, int timeInHours)
+ {
+    ignoreUnused(numberOfTracks, timeInHours);
+    return {};
+ }
 
-/*
- 3)
- */
+ // 4)
+char lastCharFrom(char[6])
+ {
+    return {};
+ }
 
-/*
- 4)
- */
+ // 5)
+double sqrtOf(int rooting)
+ {
+    ignoreUnused(rooting);
+    return {};
+ }
+ 
+ // 6)
+void finishExercises(int numberOfExercises)
+ {
+    ignoreUnused(numberOfExercises);
+ }
 
-/*
- 5)
- */
+ // 7)
+void turnMusicOn(bool loud)
+ {
+    ignoreUnused(loud);
+ }
 
-/*
- 6)
- */
+ //8) 
+void rollCigarrettes(int amount)
+ {
+    ignoreUnused(amount);
+ }
 
-/*
- 7)
- */
+// 9)
+void smokeCigarrette(bool isLighterWorking)
+ {
+    ignoreUnused(isLighterWorking);
+ }
 
-/*
- 8)
- */
+ //10)
+void burnHouse(bool isSomebodyInThere)
+ {
+    ignoreUnused(isSomebodyInThere);
+ }
 
-/*
- 9)
- */
-
-/*
- 10)
- */
 
 int main()
 {
@@ -126,27 +182,33 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto lapsCompleted = numberOfLapsCompleted(60, 200);
     //2)
-    
+    auto trackBpms = measureTrackBpms(135, 1);
     //3)
-    
+    auto playingTonight = playTonight(30, 2);
     //4)
-    
+    auto lastChar = lastCharFrom("Miguel");
     //5)
-    
+    auto sqrt = sqrtOf(64);
     //6)
-    
+    finishExercises(8);
     //7)
-    
+    turnMusicOn(1);
     //8)
-    
+    rollCigarrettes(1);
     //9)
-    
+    smokeCigarrette(true);
     //10)
-    
+    burnHouse(false);
     
     ignoreUnused(carRented);
+    ignoreUnused(lapsCompleted);
+    ignoreUnused(trackBpms);
+    ignoreUnused(playingTonight);
+    ignoreUnused(lastChar);
+    ignoreUnused(sqrt);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
